@@ -1,0 +1,2 @@
+# PlaceholderDemo
+SwiftUIのPlaceholder用のビュー表示のサンプル
