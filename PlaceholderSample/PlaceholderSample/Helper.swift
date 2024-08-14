@@ -28,9 +28,9 @@ struct PathProvider {
         case .editDefaultPlaceholder:
             EditDefaultPlaceholderView()
         case .customPlaceholder:
-            Text("工事中")
+            CustomPlaceholderView()
         case .customVerticalPlaceholder:
-            Text("工事中")
+            CustomVerticalPlaceholderView()
         }
     }
 }
