@@ -1,5 +1,8 @@
 # PlaceholderDemo
 
+[![FABoLL](https://custom-icon-badges.herokuapp.com/badge/license-FABoLL-8BB80A.svg?logo=law&logoColor=white)]()　[![iOS 17.5](https://custom-icon-badges.herokuapp.com/badge/iOS-17.5-007bff.svg?logo=apple&logoColor=white)]()　[![Xcode 15.4](https://custom-icon-badges.herokuapp.com/badge/Xcode-15.4-007bff.svg?logo=Xcode&logoColor=white)]()　[![Swift 5.10](https://custom-icon-badges.herokuapp.com/badge/Swift-5.10-df5c43.svg?logo=Swift&logoColor=white)]()
+
+
 SwiftUIのPlaceholder用のビュー表示のサンプル
 
 ## 標準のPlaceholderを使った場合
