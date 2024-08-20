@@ -103,7 +103,6 @@ struct RedactingView<Input: View, Output: View>: View {
             content
         } else {
             modifier(content)
-                .clipped()
         }
     }
 }

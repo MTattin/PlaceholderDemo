@@ -30,25 +30,22 @@ struct LineSkeletonView: View {
     // MARK: - Views
 
     var body: some View {
-        Rectangle()
-            .fill(.clear)
-            .background {
-                ZStack {
-                    baseColor
-                    LinearGradient(
-                        gradient: Gradient(colors: colors),
-                        startPoint: gradientStart,
-                        endPoint: gradientEnd
-                    )
-                    .scaleEffect(x: 2)
-                }
+        ZStack {
+            baseColor
+            LinearGradient(
+                gradient: Gradient(colors: colors),
+                startPoint: gradientStart,
+                endPoint: gradientEnd
+            )
+            .scaleEffect(x: 2)
+        }
+        .clipped()
+        .onAppear {
+            withAnimation(Animation.linear(duration: 2).repeatForever(autoreverses: false)) {
+                gradientStart = UnitPoint(x: 1, y: 0.5)
+                gradientEnd = UnitPoint(x: 2, y: 0.5)
             }
-            .onAppear {
-                withAnimation(Animation.linear(duration: 2).repeatForever(autoreverses: false)) {
-                    gradientStart = UnitPoint(x: 1, y: 0.5)
-                    gradientEnd = UnitPoint(x: 2, y: 0.5)
-                }
-            }
+        }
     }
 }
 

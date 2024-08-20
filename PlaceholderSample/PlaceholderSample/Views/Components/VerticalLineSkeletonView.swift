@@ -30,25 +30,22 @@ struct VerticalLineSkeletonView: View {
     // MARK: - Views
 
     var body: some View {
-        Rectangle()
-            .fill(.clear)
-            .background {
-                ZStack {
-                    baseColor
-                    LinearGradient(
-                        gradient: Gradient(colors: colors),
-                        startPoint: gradientStart,
-                        endPoint: gradientEnd
-                    )
-                    .scaleEffect(x: 2)
-                }
+        ZStack {
+            baseColor
+            LinearGradient(
+                gradient: Gradient(colors: colors),
+                startPoint: gradientStart,
+                endPoint: gradientEnd
+            )
+            .scaleEffect(x: 2)
+        }
+        .clipped()
+        .onAppear {
+            withAnimation(Animation.linear(duration: 2).repeatForever(autoreverses: false)) {
+                gradientStart = UnitPoint(x: 0.5, y: 1)
+                gradientEnd = UnitPoint(x: 0.5, y: 2)
             }
-            .onAppear {
-                withAnimation(Animation.linear(duration: 2).repeatForever(autoreverses: false)) {
-                    gradientStart = UnitPoint(x: 0.5, y: 1)
-                    gradientEnd = UnitPoint(x: 0.5, y: 2)
-                }
-            }
+        }
     }
 }
 
